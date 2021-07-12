@@ -3,11 +3,11 @@ from django.shortcuts import render
 def index(request):
     return render(request, 'coloring/index.html')
 
-def screen1(request):
-    return render(request, 'coloring/screen1.html')
+def home(request):
+    return render(request, 'coloring/home.html')
 
-def createnew(request):
-    return render(request, 'coloring/createnew.html')
+def drawing(request):
+    return render(request, 'coloring/drawing.html')
 
 def templates(request):
     return render(request, 'coloring/templates.html')
