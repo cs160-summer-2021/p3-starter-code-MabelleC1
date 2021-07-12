@@ -6,6 +6,6 @@ urlpatterns = [
     path('screen1', views.screen1, name='screen1'),
     path('createnew', views.createnew, name='createnew'),
     path('templates', views.templates, name='templates'),
-    path('open', views.createnew, name='open'),
+    path('open', views.open, name='open'),
     path('new_interaction', views.index, name='new_interaction')
 ]

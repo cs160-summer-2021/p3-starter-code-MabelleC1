@@ -10,12 +10,25 @@
             width: 100vh;
             height: 100vh;
         }
-        .firstrow{
-            background-color: red;
+        .my-col{
+            margin-top: 1.5%;
         }
         .second-col{
-            margin-left:-200%;
+            margin-left:-60%;
+            font-size: 100px;
+            color: black;
         }
+        .firstrowofthings{
+            text-align:center;
+            margin-top: 5%;
+            color: black;
+        }
+        .secondrowofthings{
+            text-align:center;
+            margin-top: 5%;
+            color: black;
+        }
+
     </style>
      <link rel="preconnect" href="https://fonts.googleapis.com">
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -27,45 +40,45 @@
         <div class = "row firstrow">
             <div class = "col my-col">
                 <a href="/coloring/screen1">
-                    <img src="{% static 'coloring/images/goback.png' %}" alt="Go back" width="50" height="50">
+                    <img src="{% static 'coloring/images/templatesscreen/goback.png' %}" alt="Go back" width="120" height="120">
             </div>
             <div class = "col second-col">
-                <h1>Templates</h1>
+                Templates
             </div>
         </div>
-        <div class = "row">
+        <div class = "row firstrowofthings">
             <div class = "col">
-                <img source = "">
+                <img src = "{% static 'coloring/images/templatesscreen/blankcanvas.png' %}" width = "200" height= "200" border: 5px solid #555>
                 <h3>Blank Canvas</h3>
             </div>
             <div class = "col">
-                <img source = "">
+                <img src = "{% static 'coloring/images/templatesscreen/lion-clipart.png' %}" width = "200" height= "200">
                 <h3>Animals</h3>
             </div>
             <div class = "col">
-                <img source = "">
+                <img src = "{% static 'coloring/images/templatesscreen/scenery-clip-art.jpeg' %}" width = "200" height= "200">
                 <h3>Scenery</h3>
             </div>
             <div class = "col">
-                <img source = "">
+                <img src = "{% static 'coloring/images/templatesscreen/abstract-clipart.jpeg' %}" width = "200" height= "200">
                 <h3>Abstract</h3>
             </div>
         </div>
-        <div class = "row">
+        <div class = "row secondrowofthings">
             <div class = "col">
-                <img source = "">
+                <img src = "{% static 'coloring/images/templatesscreen/mickey.jpeg' %}" width = "200" height= "200">
                 <h3>Cartoons</h3>
             </div>
             <div class = "col">
-                <img source = "">
+                <img src = "{% static 'coloring/images/templatesscreen/city.png' %}" width = "200" height= "200">
                 <h3>City</h3>
             </div>
             <div class = "col">
-                <img source = "">
+                <img src = "{% static 'coloring/images/templatesscreen/fruit-clipart.png' %}"width = "200" height= "200">
                 <h3>Fruit</h3>
             </div>
             <div class = "col">
-                <img source = "">
+                <img src = "{% static 'coloring/images/templatesscreen/search.png' %}"width = "200" height= "200">
                 <h3>Search</h3>
             </div>
         </div>
