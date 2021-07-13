@@ -1,0 +1,95 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Main Screen</title>
+	<style>
+        .topscreen{
+            position: "relative";
+            background-image: url("{% static 'coloring/images/homescreen/beach.jpeg' %}");
+            height: 85vh;
+        }
+        .logo-row{
+            width: 300px;
+            position: absolute;
+            left: 50;
+            top: 50;
+            transform: translate(-50%,-50%);
+            margin-left: 50%;
+            margin-top: 35%;
+        }
+        .logo{
+            width: 100%;
+            height: 450px;
+            text-align: center;
+            border: 5px solid #C0B9EE;
+            border-radius: 50%;
+        }
+        .title{
+            font-size: 100px;
+            font-family: "Zen Tokyo Zoo";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .bottomnav{
+            position: "relative";
+            height: 15vh;
+            font-size: 30px;
+            background-color: #7A9C95;
+        }
+        .buttons{
+            margin-top: 10px;
+        }
+        .button{
+            font-size:40px;
+            box-shadow:10px 10px 0 rgba(0,0,0,.5);
+            background-color: #BCA490;
+            padding: 15px 32px;
+            text-align: center;
+            display: inline-block;
+            text-decoration: none;
+            width: 100%;
+            color:black;
+            cursor: pointer;
+        }
+        .button:hover {
+        
+        box-shadow: 0 0 0 ;
+        }
+  
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static 'coloring/vendors/bootstrap/css/bootstrap.css' %}" />
+
+</head>
+<body>
+
+	<!-- replace this html -->
+	<div class="container-fluid">
+        <div class = "row topscreen">
+            <div class = "col logo-row">
+                <img src = "{% static 'coloring/images/homescreen/palmtree4.png' %}" alt = "Chillin Colors" class = "logo" > 
+                <div class = "title">Chillin Colors</div>
+            </div>
+        </div>
+        <div class = "row bottomnav">
+            <div class = "col buttons">
+                <a class ="button" href="/coloring/drawing">Create New</a>
+            </div>
+            <div class = "col buttons">
+                <a class = "button" href="/coloring/templates">Templates</a>
+            </div>
+            <div class = "col buttons">
+                <a class = "button" href="/coloring/open">Open</a>
+            </div>
+        </div>
+    </div>
+	
+	<!-- /replace this html -->
+</body>
+</html>
