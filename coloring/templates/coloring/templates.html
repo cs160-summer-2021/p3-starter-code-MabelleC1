@@ -14,19 +14,47 @@
             margin-top: 1.5%;
         }
         .second-col{
-            margin-left:-60%;
+            margin-left:-77%;
             font-size: 100px;
             color: black;
+            font-family: Lobster;
+        }
+        .horizontal_slider{
+            display:block;
+            width: 100%;
+            overflow-x:scroll;
+        }
+        .slider_container{
+            display:inline-block;
+            white-space:nowrap;
+        }
+        .item{
+            display: inline-block;
+            text-align:left;
         }
         .firstrowofthings{
-            text-align:center;
-            margin-top: 5%;
+            text-align:left;
+            margin-top: 2%;
             color: black;
         }
         .secondrowofthings{
-            text-align:center;
-            margin-top: 5%;
+            text-align:left;
+            margin-top: 2%;
             color: black;
+        }
+        .myitem{
+            text-align: center;
+        }
+        .myitem img{
+            width: 225px;
+            height: 225px;
+            border: 5px solid #0a6082;
+            box-shadow:10px 10px 0 rgba(0,0,0,.5);
+        }
+        .myitem h3{
+            padding-top:10px;
+            font-family: Oswald;
+            font-size:35px;
         }
 
     </style>
@@ -34,6 +62,11 @@
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
      <link href="https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap" rel="stylesheet">
      <link rel="stylesheet" type="text/css" href="{% static 'coloring/vendors/bootstrap/css/bootstrap.css' %}" />
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Oswald&display=swap" rel="stylesheet">
+     
 </head>
 <body> 
     <div class = "container-fluid">
@@ -46,40 +79,69 @@
                 Templates
             </div>
         </div>
-        <div class = "row firstrowofthings">
-            <div class = "col">
-                <img src = "{% static 'coloring/images/templatesscreen/blankcanvas.png' %}" width = "200" height= "200" border: 5px solid #555>
-                <h3>Blank Canvas</h3>
-            </div>
-            <div class = "col">
-                <img src = "{% static 'coloring/images/templatesscreen/lion-clipart.png' %}" width = "200" height= "200">
-                <h3>Animals</h3>
-            </div>
-            <div class = "col">
-                <img src = "{% static 'coloring/images/templatesscreen/scenery-clip-art.jpeg' %}" width = "200" height= "200">
-                <h3>Scenery</h3>
-            </div>
-            <div class = "col">
-                <img src = "{% static 'coloring/images/templatesscreen/abstract-clipart.jpeg' %}" width = "200" height= "200">
-                <h3>Abstract</h3>
-            </div>
-        </div>
-        <div class = "row secondrowofthings">
-            <div class = "col">
-                <img src = "{% static 'coloring/images/templatesscreen/mickey.jpeg' %}" width = "200" height= "200">
-                <h3>Cartoons</h3>
-            </div>
-            <div class = "col">
-                <img src = "{% static 'coloring/images/templatesscreen/city.png' %}" width = "200" height= "200">
-                <h3>City</h3>
-            </div>
-            <div class = "col">
-                <img src = "{% static 'coloring/images/templatesscreen/fruit-clipart.png' %}"width = "200" height= "200">
-                <h3>Fruit</h3>
-            </div>
-            <div class = "col">
-                <img src = "{% static 'coloring/images/templatesscreen/search.png' %}"width = "200" height= "200">
-                <h3>Search</h3>
+        <div class = "row horizontal_slider">
+            <div class = "col slider_container">
+                <div class = "col item">
+                    <div class = "row firstrowofthings">
+                        <div class = "col myitem">
+                            <a href="/coloring/drawing"><img src = "{% static 'coloring/images/templatesscreen/blankcanvas.png' %}"></a>
+                            <h3>Blank Canvas</h3>
+                        </div>
+                        </a>
+                        <div class = "col myitem">
+                            <a href="/coloring/templates/animals"><img src = "{% static 'coloring/images/templatesscreen/lion-clipart.png' %}"></a>
+                            <h3>Animals</h3>
+                        </div>
+                        <div class = "col myitem">
+                            <a href="/coloring/templates/error"><img src = "{% static 'coloring/images/templatesscreen/scenery-clip-art.jpeg' %}"></a>
+                            <h3>Scenery</h3>
+                        </div>
+                    </div>
+                    <div class = "row secondrowofthings">
+                        <div class = "col myitem">
+                            <a href="/coloring/templates/error"><img src = "{% static 'coloring/images/templatesscreen/abstract-clipart.jpeg' %}"></a>
+                            <h3>Abstract</h3>
+                        </div>
+                        <div class = "col myitem">
+                            <a href="/coloring/templates/error"><img src = "{% static 'coloring/images/templatesscreen/mickey.jpeg' %}"></a>
+                            <h3>Cartoons</h3>
+                        </div>
+                        <div class = "col myitem">
+                            <a href="/coloring/templates/error"><img src = "{% static 'coloring/images/templatesscreen/city.png' %}"></a>
+                            <h3>City</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class = "col item">
+                    <div class = "row firstrowofthings">
+                        <div class = "col myitem">
+                            <a href="/coloring/templates/error"><img src = "{% static 'coloring/images/templatesscreen/numbers.jpeg' %}"></a>
+                            <h3>Numbers</h3>
+                        </div>
+                        <div class = "col myitem">
+                            <a href="/coloring/templates/error"><img src = "{% static 'coloring/images/templatesscreen/fruit-clipart.png' %}"></a>
+                            <h3>Fruit</h3>
+                        </div>
+                        <div class = "col myitem">
+                            <a href="/coloring/templates/error"><img src = "{% static 'coloring/images/templatesscreen/kitchen.png' %}"></a>
+                            <h3>Kitchen</h3>
+                        </div>
+                    </div>
+                    <div class = "row secondrowofthings">
+                        <div class = "col myitem">
+                            <a href="/coloring/templates/error"><img src = "{% static 'coloring/images/templatesscreen/celebrity.png' %}"></a>
+                            <h3>Celebrities</h3>
+                        </div>
+                        <div class = "col myitem">
+                            <a href="/coloring/templates/error"><img src = "{% static 'coloring/images/templatesscreen/map.png' %}"></a>
+                            <h3>Maps</h3>
+                        </div>
+                        <div class = "col myitem">
+                            <a href="/coloring/templates/error"><img src = "{% static 'coloring/images/templatesscreen/search.png' %}"></a>
+                            <h3>Search</h3>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
