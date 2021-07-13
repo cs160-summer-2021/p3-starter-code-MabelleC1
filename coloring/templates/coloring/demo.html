@@ -99,17 +99,17 @@
 				paper.setup(canvas);
 				getColorsCreatePalette();
 
-				// paper.project.importSVG(mandala.filePath, function(item) {
-				// 	mandala.item = item._children["design-freepik"];
-				//     paper.project.insertLayer(0,mandala.item);
+				paper.project.importSVG(mandala.filePath, function(item) {
+					mandala.item = item._children["design-freepik"];
+				    paper.project.insertLayer(0,mandala.item);
 
-				//     if (custom) {
-				//     	myCustomInteraction();
-				//     } else {
-				//     	myGradientInteraction();
-				//     }
+				    if (custom) {
+				    	myCustomInteraction();
+				    } else {
+				    	myGradientInteraction();
+				    }
 
-				// });
+				});
 			}
 
 			// Set up the mandala interactivity.
