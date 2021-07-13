@@ -6,6 +6,8 @@ urlpatterns = [
     path('home', views.home, name='home'),
     path('drawing', views.drawing, name='drawing'),
     path('templates', views.templates, name='templates'),
+    path('templates/animals', views.animals, name='animals'),
+    path('templates/error', views.error, name='error'),
     path('open', views.open, name='open'),
     path('new_interaction', views.index, name='new_interaction')
 ]

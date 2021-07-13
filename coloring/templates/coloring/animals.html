@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Animals Screen</title>
+        <style>
+        .container-fluid{
+            background-color: #0a6082;
+            width: 100vh;
+            height: 100vh;
+        }
+        .my-col{
+            margin-top: 1.5%;
+        }
+        .second-col{
+            margin-left:-35%;
+            font-size: 100px;
+            color: #d9ab23;
+            font-family: Lobster;
+        }
+        .firstrowofthings{
+            text-align:left;
+            margin-top: 4%;
+            color: black;
+        }
+        .secondrowofthings{
+            text-align:left;
+            margin-top: 4%;
+            color: black;
+        }
+        .myitem{
+            text-align: center;
+        }
+        .myitem img{
+            width: 250px;
+            height: 250px;
+            border: 10px solid #022a3b;
+            box-shadow:10px 10px 0 rgba(0,0,0,.5);
+        }
+        </style>
+        <link rel="stylesheet" type="text/css" href="{% static 'coloring/vendors/bootstrap/css/bootstrap.css' %}" />
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Oswald&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class = "container-fluid">
+            <div class = "row firstrow">
+                <div class = "col my-col">
+                    <a href="/coloring/templates">
+                        <img src="{% static 'coloring/images/templatesscreen/goback.png' %}" alt="Go back" width="120" height="120">
+                </div>
+                <div class = "col second-col">
+                    Animal Screen
+                </div>
+            </div>
+            <div class = "row firstrowofthings">
+                <div class = "col myitem">
+                    <img src="{% static 'coloring/images/templatesscreen/animaltemplates/tiger.png' %}">
+                </div>
+                <div class = "col myitem">
+                    <img src="{% static 'coloring/images/templatesscreen/animaltemplates/dog.png' %}">
+                </div>
+                <div class = "col myitem">
+                    <img src="{% static 'coloring/images/templatesscreen/animaltemplates/iguana.jpeg' %}">
+                </div>
+            </div>
+            <div class = "row secondrowofthings">
+                <div class = "col myitem">
+                    <img src="{% static 'coloring/images/templatesscreen/animaltemplates/elephant.png' %}">
+                </div>
+                <div class = "col myitem">
+                    <img src="{% static 'coloring/images/templatesscreen/animaltemplates/cat.jpeg' %}">
+                </div>
+                <div class = "col myitem">
+                    <img src="{% static 'coloring/images/templatesscreen/animaltemplates/rooster.jpg' %}">
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

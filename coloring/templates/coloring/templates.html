@@ -14,9 +14,10 @@
             margin-top: 1.5%;
         }
         .second-col{
-            margin-left:-60%;
+            margin-left:-77%;
             font-size: 100px;
             color: black;
+            font-family: Lobster;
         }
         .horizontal_slider{
             display:block;
@@ -29,15 +30,16 @@
         }
         .item{
             display: inline-block;
+            text-align:left;
         }
         .firstrowofthings{
             text-align:left;
-            margin-top: 5%;
+            margin-top: 2%;
             color: black;
         }
         .secondrowofthings{
             text-align:left;
-            margin-top: 5%;
+            margin-top: 2%;
             color: black;
         }
         .myitem{
@@ -46,48 +48,13 @@
         .myitem img{
             width: 225px;
             height: 225px;
+            border: 5px solid #0a6082;
+            box-shadow:10px 10px 0 rgba(0,0,0,.5);
         }
-        .search {
-            width: 100%;
-            position: relative;
-            display: flex;
-        }
-
-        .searchTerm {
-        width: 100%;
-        border: 3px solid #00B4CC;
-        border-right: none;
-        padding: 5px;
-        height: 40px;
-        font-size: px;
-        border-radius: 5px 0 0 5px;
-        outline: none;
-        color: #9DBFAF;
-        }
-
-        .searchTerm:focus{
-        color: #00B4CC;
-        }
-
-        .searchButton {
-        width: 40px;
-        height: 36px;
-        border: 1px solid #00B4CC;
-        background: #00B4CC;
-        text-align: center;
-        color: #fff;
-        border-radius: 0 5px 5px 0;
-        cursor: pointer;
-        font-size: 20px;
-        }
-
-        /*Resize the wrap to see the search bar change!*/
-        .wrap{
-        width: 30%;
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        .myitem h3{
+            padding-top:10px;
+            font-family: Oswald;
+            font-size:35px;
         }
 
     </style>
@@ -95,33 +62,21 @@
      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
      <link href="https://fonts.googleapis.com/css2?family=Zen+Tokyo+Zoo&display=swap" rel="stylesheet">
      <link rel="stylesheet" type="text/css" href="{% static 'coloring/vendors/bootstrap/css/bootstrap.css' %}" />
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Oswald&display=swap" rel="stylesheet">
+     
 </head>
 <body> 
     <div class = "container-fluid">
         <div class = "row firstrow">
             <div class = "col my-col">
-<<<<<<< HEAD
-                <a href="/coloring/screen1">
-                    <img src="{% static 'coloring/images/templatesscreen/goback.png' %}" alt="Go back" width="100" height="120">
-=======
                 <a href="/coloring/home">
                     <img src="{% static 'coloring/images/templatesscreen/goback.png' %}" alt="Go back" width="120" height="120">
->>>>>>> 23edb10789b465eafd5b1734372027129448ed66
             </div>
             <div class = "col second-col">
                 Templates
-            </div>
-        </div>
-        <div class = "row">
-            <div class="col searchbar">
-                <div class="wrap">
-                    <div class="search">
-                       <input type="text" class="searchTerm" placeholder="Search templates">
-                       <button type="submit" class="searchButton">
-                         <i class="fa fa-search"></i>
-                      </button>
-                    </div>
-                </div>
             </div>
         </div>
         <div class = "row horizontal_slider">
@@ -129,29 +84,30 @@
                 <div class = "col item">
                     <div class = "row firstrowofthings">
                         <div class = "col myitem">
-                            <img src = "{% static 'coloring/images/templatesscreen/blankcanvas.png' %}">
+                            <a href="/coloring/drawing"><img src = "{% static 'coloring/images/templatesscreen/blankcanvas.png' %}"></a>
                             <h3>Blank Canvas</h3>
                         </div>
+                        </a>
                         <div class = "col myitem">
-                            <img src = "{% static 'coloring/images/templatesscreen/lion-clipart.png' %}">
+                            <a href="/coloring/templates/animals"><img src = "{% static 'coloring/images/templatesscreen/lion-clipart.png' %}"></a>
                             <h3>Animals</h3>
                         </div>
                         <div class = "col myitem">
-                            <img src = "{% static 'coloring/images/templatesscreen/scenery-clip-art.jpeg' %}">
+                            <a href="/coloring/templates/error"><img src = "{% static 'coloring/images/templatesscreen/scenery-clip-art.jpeg' %}"></a>
                             <h3>Scenery</h3>
                         </div>
                     </div>
                     <div class = "row secondrowofthings">
                         <div class = "col myitem">
-                            <img src = "{% static 'coloring/images/templatesscreen/abstract-clipart.jpeg' %}">
+                            <a href="/coloring/templates/error"><img src = "{% static 'coloring/images/templatesscreen/abstract-clipart.jpeg' %}"></a>
                             <h3>Abstract</h3>
                         </div>
                         <div class = "col myitem">
-                            <img src = "{% static 'coloring/images/templatesscreen/mickey.jpeg' %}">
+                            <a href="/coloring/templates/error"><img src = "{% static 'coloring/images/templatesscreen/mickey.jpeg' %}"></a>
                             <h3>Cartoons</h3>
                         </div>
                         <div class = "col myitem">
-                            <img src = "{% static 'coloring/images/templatesscreen/city.png' %}">
+                            <a href="/coloring/templates/error"><img src = "{% static 'coloring/images/templatesscreen/city.png' %}"></a>
                             <h3>City</h3>
                         </div>
                     </div>
@@ -159,15 +115,29 @@
                 <div class = "col item">
                     <div class = "row firstrowofthings">
                         <div class = "col myitem">
-                            <img src = "{% static 'coloring/images/templatesscreen/mickey.jpeg' %}">
-                            <h3>Cartoons</h3>
+                            <a href="/coloring/templates/error"><img src = "{% static 'coloring/images/templatesscreen/numbers.jpeg' %}"></a>
+                            <h3>Numbers</h3>
                         </div>
                         <div class = "col myitem">
-                            <img src = "{% static 'coloring/images/templatesscreen/fruit-clipart.png' %}">
+                            <a href="/coloring/templates/error"><img src = "{% static 'coloring/images/templatesscreen/fruit-clipart.png' %}"></a>
                             <h3>Fruit</h3>
                         </div>
                         <div class = "col myitem">
-                            <img src = "{% static 'coloring/images/templatesscreen/search.png' %}">
+                            <a href="/coloring/templates/error"><img src = "{% static 'coloring/images/templatesscreen/kitchen.png' %}"></a>
+                            <h3>Kitchen</h3>
+                        </div>
+                    </div>
+                    <div class = "row secondrowofthings">
+                        <div class = "col myitem">
+                            <a href="/coloring/templates/error"><img src = "{% static 'coloring/images/templatesscreen/celebrity.png' %}"></a>
+                            <h3>Celebrities</h3>
+                        </div>
+                        <div class = "col myitem">
+                            <a href="/coloring/templates/error"><img src = "{% static 'coloring/images/templatesscreen/map.png' %}"></a>
+                            <h3>Maps</h3>
+                        </div>
+                        <div class = "col myitem">
+                            <a href="/coloring/templates/error"><img src = "{% static 'coloring/images/templatesscreen/search.png' %}"></a>
                             <h3>Search</h3>
                         </div>
                     </div>

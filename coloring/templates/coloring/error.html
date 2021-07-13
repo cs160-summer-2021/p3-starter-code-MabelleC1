@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Error Screen</title>
+        <style>
+            body{
+                background-color: #0a6082;
+            }
+            h1{
+                margin-left: 10%;
+                margin-right: 10%;
+                margin-top:10%;
+                color:black;
+                font-size: 70px;
+                text-align:center;
+            }
+            .goback{
+                text-align:center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Hi, this is a prototype, but thanks for checking all the pages. Alot of our pages aren't completely done, so try clicking on the "Animals" template.</h1>
+        <div class = "goback">
+            <a href="/coloring/templates"><img src="{% static 'coloring/images/templatesscreen/goback.png' %}" alt="Go back" width="120" height="120"></a>
+        </div>
+    </body>
+</html>

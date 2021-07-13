@@ -14,3 +14,9 @@ def templates(request):
 
 def open(request):
     return render(request, 'coloring/open.html')
+
+def animals(request):
+	return render(request, 'coloring/animals.html')
+
+def error(request):
+	return render(request, 'coloring/error.html')
