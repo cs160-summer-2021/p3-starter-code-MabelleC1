@@ -17,12 +17,16 @@
     <script type="text/javascript" canvas="canvas">
 		window.onload = function() {
 			var canvas = document.getElementById('myCanvas');
+            var queryString = window.location.search;
+            console.log(queryString);
+            queryString =queryString.substring(1);
+            console.log(queryString);
 
 			// coloring page
 			var mandala = {
 				item: null,
 				lastClicked: null,
-				filePath: '/static/coloring/images/mandala-freepik.svg'
+				filePath: '/static/coloring/images/'+queryString+'.svg'
 			};
 
 			// color palette
@@ -105,7 +109,6 @@
 				}
                 
 			}
-
 			// create a color palette with the given colors
 			function createColorPalette(colors){
 
@@ -314,7 +317,6 @@
     <div class="draggable" id="color-palette"></div>
     
 </body>
-
 <script>
     $( "#palettebutton" ).click(function() {
         $( "#color-palette" ).toggle( "slow", function() {
