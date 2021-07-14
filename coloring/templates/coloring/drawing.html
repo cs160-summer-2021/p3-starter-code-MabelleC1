@@ -81,6 +81,16 @@
                 $("#eraserbutton").css("color", "black");
             });
 
+            var brushsize = 10;
+            $( "#smallstroke" ).click(function() {
+                brushsize = 10;
+            });
+            $( "#midstroke" ).click(function() {
+                brushsize = 20;
+            });
+            $( "#bigstroke" ).click(function() {
+                brushsize = 30;
+            });
             
             
             
@@ -93,6 +103,8 @@
             $( ".menubutton" ).mouseup(function() {
                 $(this).css("color", "black");
             });
+
+            
 
 			function myCustomInteraction() {
 				var tool = new paper.Tool();
@@ -115,7 +127,7 @@
                             hit.item.fillColor = cp.history[cp.history.length - 1];
                         }
                     }
-                    path.strokeWidth = 10;
+                    path.strokeWidth = brushsize;
                 }
                 
                 tool.onMouseDrag = function (event) {
@@ -196,8 +208,8 @@
         }
 
         canvas[resize] {
-            width: 100%;
-            height: 120%;
+            width: 70%;
+            height: 110%;
         }
 
         #color-palette {
@@ -268,9 +280,25 @@
             padding-top: 50px;
         }
 
-        /* .drawing {
-            padding-left: 100px;
-        } */
+        #bigstroke {
+            padding-top: 2px;
+            padding-left: 15px;
+            padding-right: 18px;
+            transform: scale(1.8);
+        }
+
+        #brush-interface {
+            background-color: burlywood;
+			display: flex;
+			flex-wrap: wrap;
+            bottom: 0;
+            left: 0;
+			position: fixed;
+            padding: 7px;
+            
+            box-shadow: -10px 10px 10px 10px;
+            border-radius: 10px;
+        }
 
         
     </style>
@@ -313,6 +341,7 @@
                     <path d="M16 8c0 3.15-1.866 2.585-3.567 2.07C11.42 9.763 10.465 9.473 10 10c-.603.683-.475 1.819-.351 2.92C9.826 14.495 9.996 16 8 16a8 8 0 1 1 8-8zm-8 7c.611 0 .654-.171.655-.176.078-.146.124-.464.07-1.119-.014-.168-.037-.37-.061-.591-.052-.464-.112-1.005-.118-1.462-.01-.707.083-1.61.704-2.314.369-.417.845-.578 1.272-.618.404-.038.812.026 1.16.104.343.077.702.186 1.025.284l.028.008c.346.105.658.199.953.266.653.148.904.083.991.024C14.717 9.38 15 9.161 15 8a7 7 0 1 0-7 7z"/>
                 </svg>
             </div>
+            
         </div>
 
         <div class="rightmenu">
@@ -336,11 +365,34 @@
     <canvas id="myCanvas" resize></canvas>
     
     <div class="draggable" id="color-palette"></div>
+    <div class="draggable" id="brush-interface">
+        <div class="menubutton" id="smallstroke">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-dash" viewBox="0 0 16 16">
+                <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+            </svg>
+        </div>
+        <div class="menubutton" id="midstroke">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-dash-lg" viewBox="0 0 16 16">
+                <path d="M0 8a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H1a1 1 0 0 1-1-1z"/>
+            </svg>
+        </div>
+        <div class="menubutton" id="bigstroke">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-dash-lg" viewBox="0 0 16 16">
+                <path d="M0 8a1 1 0 0 1 1-1h14a1 1 0 1 1 0 2H1a1 1 0 0 1-1-1z"/>
+            </svg>
+        </div>
+    </div>
     
 </body>
 <script>
     $( "#palettebutton" ).click(function() {
         $( "#color-palette" ).toggle( "slow", function() {
+
+        });
+    });
+
+    $( "#brushbutton" ).click(function() {
+        $( "#brush-interface" ).toggle( "slow", function() {
 
         });
     });
