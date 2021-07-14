@@ -10,5 +10,6 @@ urlpatterns = [
     path('templates/abstract', views.abstract, name='abstract'),
     path('templates/error', views.error, name='error'),
     path('open', views.open, name='open'),
+    path('open/all', views.all, name='all'),
     path('new_interaction', views.index, name='new_interaction')
 ]

@@ -26,3 +26,6 @@ def error(request):
 
 def demo(request):
 	return render(request, 'coloring/demo.html')
+
+def all(request):
+	return render(request, 'coloring/all.html')
